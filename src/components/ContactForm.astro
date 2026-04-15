@@ -1,0 +1,16 @@
+---
+const { endpoint = 'https://formsubmit.co/you@example.com' } = Astro.props;
+---
+<form class="card" action={endpoint} method="POST">
+  <input type="hidden" name="_subject" value="Portfolio Contact" />
+  <label class="block mb-2">Name
+    <input name="name" required class="mt-1 block w-full border rounded px-3 py-2" />
+  </label>
+  <label class="block mb-2">Email
+    <input name="email" type="email" required class="mt-1 block w-full border rounded px-3 py-2" />
+  </label>
+  <label class="block mb-2">Message
+    <textarea name="message" rows="5" required class="mt-1 block w-full border rounded px-3 py-2"></textarea>
+  </label>
+  <button type="submit" class="bg-accent text-white px-4 py-2 rounded">Send</button>
+</form>

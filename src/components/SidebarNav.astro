@@ -1,0 +1,8 @@
+---
+const { items = [] } = Astro.props;
+---
+<nav class="space-y-2">
+  {items.map((it) => (
+    <a class="block py-2 px-3 rounded-md text-gray-700 hover:bg-gray-100" href={it.href}>{it.label}</a>
+  ))}
+</nav>

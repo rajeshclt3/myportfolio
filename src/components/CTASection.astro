@@ -1,0 +1,11 @@
+---
+const { title = '', subtitle = '', primary = {label:'Start'}, secondary = {label:'View'} } = Astro.props;
+---
+<section class="card text-center">
+  {title ? <h3 class="text-xl font-semibold">{title}</h3> : null}
+  {subtitle ? <p class="text-gray-600 mt-2">{subtitle}</p> : null}
+  <div class="mt-5 flex justify-center gap-4">
+    <a class="bg-accent text-white px-4 py-2 rounded">{primary.label}</a>
+    <a class="border px-4 py-2 rounded">{secondary.label}</a>
+  </div>
+</section>

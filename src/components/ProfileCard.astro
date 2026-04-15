@@ -1,0 +1,20 @@
+---
+export interface Props {
+  image?: string;
+  name: string;
+  title?: string;
+  location?: string;
+  email?: string;
+}
+const { image = '/profile.jpg', name, title, location, email } = Astro.props as Props;
+---
+<div class="profile-card">
+  <img src={image} alt="Profile" class="w-32 h-32 rounded-full object-cover mb-4" />
+  <h3 class="text-xl font-semibold">{name}</h3>
+  <p class="text-sm text-gray-500">{title}</p>
+  {location ? <p class="text-xs text-gray-400 mt-2">{location}</p> : null}
+  <div class="mt-4 w-full">
+    <a href="#contact" class="block text-center bg-accent text-white py-2 rounded-md">Contact</a>
+    {email ? <a class="block text-center mt-2 text-sm text-gray-600" href={`mailto:${email}`}>Email</a> : null}
+  </div>
+</div>

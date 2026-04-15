@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --accent: #c94a26;
+}
+
+body{
+  @apply bg-softbg text-gray-800 antialiased;
+}
+
+.card{
+  @apply bg-white shadow-soft rounded-xl p-6;
+}
+
+.profile-card{
+  @apply rounded-xl bg-white shadow-soft p-6 flex flex-col items-center;
+}

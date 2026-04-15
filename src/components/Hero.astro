@@ -1,0 +1,16 @@
+---
+const { title = '', subtitle = '', badges = [] } = Astro.props;
+---
+<section class="mb-8">
+  <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+    {title}
+  </h1>
+  {subtitle ? <p class="mt-4 text-gray-600 max-w-2xl">{subtitle}</p> : null}
+  {badges && badges.length ? (
+    <div class="mt-6 flex flex-wrap gap-2">
+      {badges.map((b) => (
+        <span class="px-3 py-1 text-xs bg-gray-100 rounded-full text-gray-600">{b}</span>
+      ))}
+    </div>
+  ) : null}
+</section>

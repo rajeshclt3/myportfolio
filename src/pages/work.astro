@@ -1,0 +1,33 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import ProfileCard from '../components/ProfileCard.astro';
+import SidebarNav from '../components/SidebarNav.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Resume', href: '/resume' },
+  { label: 'Work', href: '/work' },
+  { label: 'Contact', href: '/contact' }
+];
+
+const projects = [
+  { title: 'Neural Agriculture Monitor', image: '/placeholder.png', categories: ['AI/ML'], excerpt: 'Edge AI for precision agriculture.' },
+  { title: 'DeepSea Explorer Mk IV', image: '/placeholder.png', categories: ['Robotics'], excerpt: 'Low-latency tele-operation firmware.' }
+];
+---
+<DefaultLayout title="Work - Portfolio">
+  <div slot="sidebar">
+    <ProfileCard name="Alex Rivera" title="Embedded Systems & AI Engineer" />
+    <div class="mt-6">
+      <SidebarNav items={navItems} />
+    </div>
+  </div>
+
+  <section>
+    <h2 class="text-2xl font-semibold mb-6">Selected Works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {projects.map(p => <ProjectCard {...p} />)}
+    </div>
+  </section>
+</DefaultLayout>

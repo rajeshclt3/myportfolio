@@ -1,0 +1,31 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import ProfileCard from '../components/ProfileCard.astro';
+import SidebarNav from '../components/SidebarNav.astro';
+import ExperienceCard from '../components/ExperienceCard.astro';
+
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Resume', href: '/resume' },
+  { label: 'Work', href: '/work' },
+  { label: 'Contact', href: '/contact' }
+];
+
+const experiences = [
+  { role: 'Lead Consultant (Freelance)', company: 'Independent', range: '2022 - Present', description: 'Architectural guidance for AIoT implementations.', tags: ['AIoT', 'RTOS'] },
+  { role: 'Senior Systems Engineer', company: 'Furgo N.V', range: '2019 - 2022', description: 'Engineered sub-sea sensor integration.' }
+];
+---
+<DefaultLayout title="Resume - Portfolio">
+  <div slot="sidebar">
+    <ProfileCard name="Alex Rivera" title="Embedded Systems & AI Engineer" location="Bengaluru, India" />
+    <div class="mt-6">
+      <SidebarNav items={navItems} />
+    </div>
+  </div>
+
+  <section>
+    <h2 class="text-2xl font-semibold mb-4">Work Experience</h2>
+    {experiences.map(exp => <ExperienceCard {...exp} />)}
+  </section>
+</DefaultLayout>
