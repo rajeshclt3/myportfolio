@@ -4,5 +4,5 @@ import mdx from '@astrojs/mdx';
 
 export default defineConfig({
   integrations: [tailwind(), mdx()],
-  site: 'https://example.github.io/my-portfolio'
+  site: 'https://rajeshclt3.github.io/myportfolio'
 });
