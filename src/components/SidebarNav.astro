@@ -1,8 +1,20 @@
 ---
 const { items = [] } = Astro.props;
+const base = import.meta.env.BASE_URL || '/';
+const resolveHref = (h) => {
+  if (!h) return base;
+  if (h.startsWith('http') || h.startsWith('#')) return h;
+  if (h.startsWith('/')) return base + h.slice(1);
+  return base + h;
+};
 ---
 <nav class="space-y-2">
   {items.map((it) => (
-    <a class="block py-2 px-3 rounded-md text-gray-700 hover:bg-gray-100" href={it.href}>{it.label}</a>
+    <a
+      class="block py-2 px-3 rounded-md text-gray-700 hover:bg-gray-100"
+      href={resolveHref(it.href)}
+    >
+      {it.label}
+    </a>
   ))}
 </nav>
