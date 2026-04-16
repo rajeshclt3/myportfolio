@@ -149,4 +149,26 @@ summary::-webkit-details-marker{
 .nav-gradient > div{ display:flex; align-items:center; }
 
 /* Page accent frame around main content */
-/* page-accent removed */
+/* Left vertical accent stripe beside content */
+.accent-wrap{ position: relative; }
+.accent-wrap::before{
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 8px;
+  bottom: 8px;
+  width: 8px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #c94a26, #f39a7a 40%, #0f4b5a 100%);
+  box-shadow: 0 4px 12px rgba(201,74,38,0.08);
+}
+
+/* Rounded gradient border (frame) around content */
+.content-frame{
+  border-radius: 18px;
+  padding: 3px; /* thinner border */
+  background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #071028 0%, #0f4b5a 100%);
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+}
+.content-frame > .max-w-6xl{ border-radius: 12px; background: transparent; }

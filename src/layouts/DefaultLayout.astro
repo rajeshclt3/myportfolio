@@ -14,10 +14,12 @@ const { slot, title = 'Portfolio' } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="min-h-screen">
-    <div class="max-w-6xl mx-auto px-6 py-8 md:py-10">
-      <TopNav items={navItems} currentPath={Astro.url.pathname} />
-    </div>
-    <div class="max-w-6xl mx-auto px-6 pb-12 grid grid-cols-12 gap-8">
+    <div class="accent-wrap content-frame">
+      <div class="max-w-6xl mx-auto px-6 py-8 md:py-10">
+        <TopNav items={navItems} currentPath={Astro.url.pathname} />
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 pb-12 grid grid-cols-12 gap-8">
       <aside class="col-span-12 md:col-span-3">
         <div class="md:sticky md:top-28">
           <slot name="sidebar"><ProfileCard {...profile} /></slot>
@@ -26,6 +28,7 @@ const { slot, title = 'Portfolio' } = Astro.props;
       <main class="col-span-12 md:col-span-9">
         <slot />
       </main>
+      </div>
     </div>
   </body>
 </html>
