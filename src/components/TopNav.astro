@@ -30,7 +30,12 @@ const resolveHref = (h: string) => {
 
 const normalizePath = (path: string) => {
   if (!path) return '/';
-  return path.endsWith('/') && path.length > 1 ? path.slice(0, -1) : path;
+  let normalized = path;
+  if (normalized.startsWith(base) && base !== '/') {
+    normalized = '/' + normalized.slice(base.length);
+  }
+  normalized = normalized.replace(/\/+/g, '/');
+  return normalized.endsWith('/') && normalized.length > 1 ? normalized.slice(0, -1) : normalized;
 };
 
 const activePath = normalizePath(currentPath);
@@ -48,11 +53,12 @@ const activePath = normalizePath(currentPath);
         return (
           <a
             href={href}
+            aria-current={isActive ? 'page' : undefined}
             class:list={[
-              'transition-colors pb-1 border-b-2',
+              'transition-colors px-3 py-1.5 rounded-full border',
               isActive
-                ? 'text-accent border-accent'
-                : 'text-gray-500 hover:text-gray-800 border-transparent'
+                ? 'text-accent border-accent bg-accent/10 shadow-sm'
+                : 'text-gray-500 border-transparent hover:text-gray-800 hover:bg-gray-100 active:bg-gray-200/70'
             ]}
           >
             {item.label}

@@ -4,6 +4,8 @@
     {
       "title": "Freelance Developer",
       "company": "Self employed",
+      "location": "Remote",
+      "logoText": "SE",
       "range": "2026 - Present",
       "badge": "Current",
       "badgeTone": "accent",
@@ -15,6 +17,8 @@
     {
       "title": "Embedded Developer",
       "company": "Furgo",
+      "location": "Netherlands",
+      "logoText": "FG",
       "range": "2022 - 2025",
       "badge": "Marine",
       "badgeTone": "neutral",
@@ -34,6 +38,8 @@
     {
       "title": "Software Engineer",
       "company": "Agrifac Machinery B.V.",
+      "location": "Steenwijk, Netherlands",
+      "logoText": "AM",
       "range": "2017 - 2019",
       "badge": "Core",
       "badgeTone": "accent",
@@ -53,6 +59,8 @@
     {
       "title": "Senior Technical Lead",
       "company": "Mercedes-Benz R&D",
+      "location": "Bengaluru, India",
+      "logoText": "MB",
       "range": "2014 - 2017",
       "badge": "R&D",
       "badgeTone": "neutral",
@@ -72,6 +80,8 @@
     {
       "title": "Module Lead",
       "company": "Mindtree",
+      "location": "Bengaluru, India",
+      "logoText": "MT",
       "range": "2012 - 2014",
       "badge": "Enterprise",
       "badgeTone": "neutral",
@@ -87,6 +97,8 @@
     {
       "title": "Senior Software Engineer",
       "company": "Exor-India Pvt. Ltd",
+      "location": "Kochi, India",
+      "logoText": "EX",
       "range": "2011 - 2012",
       "badge": "Enterprise",
       "badgeTone": "neutral",
@@ -99,6 +111,8 @@
     {
       "title": "Senior Software Engineer",
       "company": "Logicpond Technologies Pvt. Ltd",
+      "location": "Kochi, India",
+      "logoText": "LP",
       "range": "2007 - 2011",
       "badge": "Enterprise",
       "badgeTone": "neutral",

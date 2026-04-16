@@ -30,8 +30,8 @@ const themeClasses = {
 }[theme];
 ---
 
-<article class="space-y-4">
-  <div class:list={['project-visual', 'bg-gradient-to-br', themeClasses]}>
+<article class="card card-dark">
+  <div class="project-visual mb-4 bg-gradient-to-br ${themeClasses}">
     <div class="project-visual-orb"></div>
     <div class="project-visual-copy">
       {visualTitle ? <p class="project-visual-title">{visualTitle}</p> : null}
@@ -39,9 +39,17 @@ const themeClasses = {
     </div>
   </div>
 
-  <div class="space-y-2">
-    <Pill text={category} />
-    <h3 class="text-2xl font-bold tracking-tight text-gray-900">{title}</h3>
+  <div class="card-header flex items-start justify-between gap-4">
+    <div>
+      <h3 class="text-lg font-semibold text-gray-900">{title}</h3>
+      <div class="text-xs text-gray-500 mt-1">{category}</div>
+    </div>
+    <div class="shrink-0">
+      <Pill text={category} />
+    </div>
+  </div>
+
+  <div class="mt-3">
     <ExpandableText preview={overview} paragraphs={details} buttonLabel="Read full overview" />
   </div>
 </article>
