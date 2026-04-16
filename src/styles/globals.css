@@ -60,6 +60,10 @@ body{
   background: linear-gradient(135deg, #071028 0%, #0f4b5a 100%);
 }
 
+.profile-card{
+  min-height: 340px;
+}
+
 summary::-webkit-details-marker{
   display: none;
 }

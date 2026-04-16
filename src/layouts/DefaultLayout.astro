@@ -2,7 +2,8 @@
 import '../styles/globals.css';
 import TopNav from '../components/TopNav.astro';
 import siteData from '../../content/site.json';
-const { navItems } = siteData;
+import ProfileCard from '../components/ProfileCard.astro';
+const { navItems, profile } = siteData;
 
 const { slot, title = 'Portfolio' } = Astro.props;
 ---
@@ -18,7 +19,9 @@ const { slot, title = 'Portfolio' } = Astro.props;
     </div>
     <div class="max-w-6xl mx-auto px-6 pb-12 grid grid-cols-12 gap-8">
       <aside class="col-span-12 md:col-span-3">
-        <slot name="sidebar" />
+        <div class="md:sticky md:top-28">
+          <slot name="sidebar"><ProfileCard {...profile} /></slot>
+        </div>
       </aside>
       <main class="col-span-12 md:col-span-9">
         <slot />

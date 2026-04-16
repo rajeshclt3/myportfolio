@@ -1,13 +1,9 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro';
-import ProfileCard from '../components/ProfileCard.astro';
-import { profile } from '../data/site';
 import ContactForm from '../components/ContactForm.astro';
 ---
 <DefaultLayout title="Contact - Portfolio">
-  <div slot="sidebar">
-    <ProfileCard {...profile} />
-  </div>
+  
 
   <section id="contact">
     <h2 class="text-2xl font-semibold mb-4">Get in touch</h2>
