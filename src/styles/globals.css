@@ -10,6 +10,12 @@ body{
   @apply bg-softbg text-gray-800 antialiased;
 }
 
+/* Prevent layout shift when scrollbar appears/disappears */
+html{ 
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
 .card{
   @apply bg-white shadow-soft rounded-xl p-6;
 }
@@ -135,3 +141,9 @@ summary::-webkit-details-marker{
 }
 
 .nav-gradient a { color: inherit; }
+
+/* Ensure nav header height is stable to avoid vertical layout drift */
+.nav-gradient{
+  min-height: 64px;
+}
+.nav-gradient > div{ display:flex; align-items:center; }
