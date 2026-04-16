@@ -1,0 +1,118 @@
+{
+  "professionalSummary": "Senior Software Engineer with 17+ years of experience in embedded systems, UI development, and distributed applications, now focused on AI-driven solutions. Expert in C++, Qt/QML, C#, and Python, with a strong background in real-time systems, IoT, and backend integration. Proven track record in designing scalable architectures, building high-performance applications, and integrating hardware with intelligent software systems. Currently working as a freelance AI engineer, developing data-driven and automation-focused solutions.",
+  "experiences": [
+    {
+      "title": "Freelance Developer",
+      "company": "Self employed",
+      "range": "2026 - Present",
+      "badge": "Current",
+      "badgeTone": "accent",
+      "summary": "Freelance Software Engineer specializing in AI-driven solutions, embedded systems, and modern application development. Expert in C++, Qt/QML, and Python, C#, Python, Database design with strong experience in building intelligent systems using AI automation, Retrieval-Augmented Generation (RAG), and data-driven architectures. Proven ability to design scalable backends, high-performance UI applications, and real-time systems, along with end-to-end solution delivery using CI/CD pipelines and Docker-based deployments. Skilled in integrating hardware, software, and AI to build robust, production-ready solutions",
+      "points": [
+        
+      ]
+    },
+    {
+      "title": "Embedded Developer",
+      "company": "Furgo",
+      "range": "2022 - 2025",
+      "badge": "Marine",
+      "badgeTone": "neutral",
+      "summary": "Worked on advanced software systems for remotely operated vehicles (ROVs), focusing on real-time communication, system reliability, and user interaction. Designed and developed high-performance UI applications using Qt/QML and built backend modules using C++ and ROS2 for distributed system architecture. Implemented a state synchronization module to maintain consistency across multiple system components and developed an event management system for real-time fault detection, classification, and pilot notifications. Contributed to system robustness through modular design and testing by creating a QML-based UI testing framework.",
+      "points": [
+        "Designed and developed user interfaces for remotely operated vehicles (ROVs). Ensured smooth interaction between UI and backend systems",
+        "Developed backend modules using C++ and ROS2 for distributed system architecture",
+        "Built an event-driven system to detect, classify, and report faults",
+        "Developed a QML-based testing framework for UI components",
+        "Improved test coverage and ensured reliability of UI modules",
+        "Worked on integration of multiple software modules within the ROV system",
+        "Collaborated with system engineers, hardware teams, and operators",
+        "Enabled real-time notifications to ROV pilots for faster diagnostics and corrective actions"
+
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Agrifac Machinery B.V.",
+      "range": "2017 - 2019",
+      "badge": "Core",
+      "badgeTone": "accent",
+      "summary": "Developed software solutions for advanced agricultural sprayer machines, focusing on UI, IoT integration, and system communication. Designed and implemented user interfaces and middleware using C++ and Qt/QML to support real-time machine operations. Built IoT modules for secure telemetry data transmission between field machines and cloud systems, enabling remote monitoring and data-driven insights. Implemented end-to-end OTA (Over-the-Air) update functionality to support remote software deployment and maintenance. Developed client-server communication using TCP/IP and ensured system reliability through automated testing. Contributed to deployment automation and system configuration using Python and Bash scripting.",
+      "points": [
+        "Designed and developed user interfaces for agricultural sprayer machines.",
+        "Developed middleware components to connect UI with backend systems",
+        "Designed and implemented IoT modules for secure data transmission",
+        "Enabled real-time telemetry from field machines to cloud servers",
+        "Implemented end-to-end OTA update functionality",
+        "Developed client-server communication modules using TCP/IP",
+        "Enabled remote software upgrades and maintenance for deployed machines",
+        "Improved software quality and reduced regression issues",
+        "Integrated UI, backend, and IoT components into a unified system"
+      ]
+    },
+    {
+      "title": "Senior Technical Lead",
+      "company": "Mercedes-Benz R&D",
+      "range": "2014 - 2017",
+      "badge": "R&D",
+      "badgeTone": "neutral",
+      "summary": "Led the design and development of simulation frameworks and infotainment applications for next-generation automotive systems. Specialized in building instrument cluster and head unit simulation platforms to validate future concepts and user experiences. Worked extensively with C++, Qt/QML, and C# (WPF) to develop high-performance, user-centric applications across Linux, Windows, and Android environments. Collaborated closely with cross-functional teams including HMI designers, system architects, and hardware engineers to align software functionality with UX goals and system constraints. Contributed to scalable architecture design, system integration, and rapid prototyping of innovative automotive features.",
+      "points": [
+        "Designed and developed simulation frameworks for head unit and instrument cluster systems",
+        "Built prototype tooling to support experimentation, analysis, and technical validation.",
+        "Built and enhanced infotainment applications for automotive platforms",
+        "Developed features and simulations for digital instrument clusters",
+        "Designed and implemented user interfaces using Qt/QML and C# (WPF)",
+        "Delivered responsive and user-centric HMI (Human-Machine Interface) solutions",
+        "Worked across Linux, Windows, and Android environments",
+        "Ensured portability and consistency of applications across platforms",
+        "Worked with MySQL and backend components for data-driven features" 
+      ]
+    },
+    {
+      "title": "Module Lead",
+      "company": "Mindtree",
+      "range": "2012 - 2014",
+      "badge": "Enterprise",
+      "badgeTone": "neutral",
+      "summary": "Designed and developed middleware and UI components for automotive navigation systems, focusing on GENIVI-based platforms. Worked extensively with C++, Qt/QML, and PostgreSQL to build scalable and efficient data handling solutions. Played a key role in architecting independent modules and enabling structured data storage and retrieval for telemetry and navigation features.",
+      "points": [
+        "Designed and implemented GENIVI-compliant interfaces for navigation applications",
+        "Developed independent middleware components for navigation modules",
+        "Built user interfaces for navigation features using Qt/QML",
+        "Focused on usability and performance in embedded automotive environments",
+        "Contributed to modular and scalable system architecture"
+      ]
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Exor-India Pvt. Ltd",
+      "range": "2011 - 2012",
+      "badge": "Enterprise",
+      "badgeTone": "neutral",
+      "summary": "Refactored and optimized existing industrial automation software applications and spearheaded the design and development of various new feature sets. Worked extensively with C++, C#, Qt/QML, and JavaScript to enhance system performance and user interface functionality within a Windows environment.",
+      "points": [
+        "Refactoring and optimization of existing industrial automation software application",
+        "Design & development of different new features"
+      ]
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Logicpond Technologies Pvt. Ltd",
+      "range": "2007 - 2011",
+      "badge": "Enterprise",
+      "badgeTone": "neutral",
+      "summary": "Design and implementation of a modular plugin architecture for various image analysis tools to enhance system flexibility. Focused on the development of high-performance UI and data visualization tools for complex image analysis. Additionally, refactored and optimized existing image library modules to improve processing efficiency and software stability. During this tenure, received consecutive honors including the Best Performer (2008), Excellent Contribution (2009), and Best Service (2010) awards for outstanding technical delivery",
+      "points": [
+        "UI development of different image analysis and data visualization tools.",
+        "Refactoring and optimization of existing image library modules",
+        "Design and implemented plugin architecture for different image analysis tools"
+      ]
+    }
+
+  ],
+  "workSkills": ["Embedded Systems , C++", "Python", "Qt/QMl", "Javascript", "SQL", "C#", "CI/CD", "Docker", "ROS2", "IoT", "CAN", "Edge AI", "Cloud Deploy"],
+  "softSkills": ["Cross Functional Collaboration", "Problem Solving", "Agile Methodology", "Technical Writing"],
+  "education": ["M.Tech in Electronics", "B.E. Electronics & Communication"],
+  "awards": ["Best performer award in 2008 from Logic Pond technologies", "Excellent contribution award in 2009 from Logic Pond technologies", "Best service award in 2010 from Logic Pond technologies", "Excellent team award in 2012 from Mindtree"]
+}

@@ -1,0 +1,15 @@
+{
+  "profile": {
+    "name": "Rajesh TC",
+    "title": "Embedded Systems & AI Engineer",
+    "location": "Leiden, Netherland",
+    "email": "rajeshclt3@gmail.com",
+    "image": "/images/profile.jpg"
+  },
+  "navItems": [
+    { "label": "Home", "href": "/resume" },
+    { "label": "Work", "href": "/work" },
+    { "label": "Skills", "href": "/skills" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}

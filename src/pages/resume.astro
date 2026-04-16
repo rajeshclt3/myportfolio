@@ -3,15 +3,10 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 import ProfileCard from '../components/ProfileCard.astro';
 import ExperienceCard from '../components/ExperienceCard.astro';
 import Pill from '../components/Pill.astro';
-import { profile } from '../data/site';
-import {
-  professionalSummary,
-  experiences,
-  workSkills,
-  softSkills,
-  education,
-  awards
-} from '../data/resume';
+import siteData from '../../content/site.json';
+const { profile } = siteData;
+import resumeData from '../../content/resume.json';
+const { professionalSummary, experiences, workSkills, softSkills, education, awards } = resumeData;
 ---
 <DefaultLayout title="Resume - Portfolio">
   <div slot="sidebar">

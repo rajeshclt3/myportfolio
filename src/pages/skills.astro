@@ -3,8 +3,10 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 import ProfileCard from '../components/ProfileCard.astro';
 import SkillSection from '../components/SkillSection.astro';
 import Pill from '../components/Pill.astro';
-import { profile } from '../data/site';
-import { skillPageIntro, skillSections, orchestrationSkills } from '../data/skills';
+import siteData from '../../content/site.json';
+const { profile } = siteData;
+import skillsData from '../../content/skills.json';
+const { skillPageIntro, skillSections, orchestrationSkills } = skillsData;
 ---
 
 <DefaultLayout title="Skills - Portfolio">

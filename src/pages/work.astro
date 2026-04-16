@@ -1,9 +1,11 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import ProfileCard from '../components/ProfileCard.astro';
-import { profile } from '../data/site';
+import siteData from '../../content/site.json';
+const { profile } = siteData;
 import ProjectShowcaseCard from '../components/ProjectShowcaseCard.astro';
-import { projects, workIntro } from '../data/work';
+import workData from '../../content/work.json';
+const { projects, workIntro } = workData;
 ---
 <DefaultLayout title="Work - Portfolio">
   <div slot="sidebar">
