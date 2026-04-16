@@ -1,0 +1,19 @@
+---
+export interface Props {
+  text: string;
+  tone?: 'neutral' | 'accent';
+  size?: 'sm' | 'md';
+}
+
+const { text, tone = 'neutral', size = 'sm' } = Astro.props as Props;
+
+const toneClass = tone === 'accent'
+  ? 'bg-orange-100 text-accent border-orange-200'
+  : 'bg-gray-100 text-gray-700 border-gray-200';
+
+const sizeClass = size === 'md'
+  ? 'text-xs px-3 py-1.5'
+  : 'text-[11px] px-2.5 py-1';
+---
+
+<span class:list={['inline-flex items-center rounded-md border font-medium', toneClass, sizeClass]}>{text}</span>

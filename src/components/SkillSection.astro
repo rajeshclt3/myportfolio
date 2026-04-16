@@ -1,0 +1,23 @@
+---
+import SkillCard from './SkillCard.astro';
+
+export interface SkillItem {
+  name: string;
+  description: string;
+  level?: string;
+}
+
+export interface Props {
+  title: string;
+  items: SkillItem[];
+}
+
+const { title, items = [] } = Astro.props as Props;
+---
+
+<section class="mb-12 last:mb-0">
+  <h2 class="text-3xl font-bold tracking-tight mb-5 text-gray-900">{title}</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+    {items.map((item) => <SkillCard {...item} />)}
+  </div>
+</section>

@@ -1,8 +1,7 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import ProfileCard from '../components/ProfileCard.astro';
-import SidebarNav from '../components/SidebarNav.astro';
-import { profile, navItems } from '../data/site';
+import { profile } from '../data/site';
 import Hero from '../components/Hero.astro';
 import CTASection from '../components/CTASection.astro';
 ---
@@ -10,9 +9,6 @@ import CTASection from '../components/CTASection.astro';
 <DefaultLayout title="Home - Portfolio">
   <div slot="sidebar">
     <ProfileCard {...profile} />
-    <div class="mt-6">
-      <SidebarNav items={navItems} />
-    </div>
   </div>
 
   <Hero title={"Architecting the \n Intelligence of Things."} subtitle={"Bridging hardware precision and intelligent software orchestration."} badges={["Embedded", "AI/ML", "UI"]} />

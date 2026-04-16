@@ -1,8 +1,7 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import ProfileCard from '../components/ProfileCard.astro';
-import SidebarNav from '../components/SidebarNav.astro';
-import { profile, navItems } from '../data/site';
+import { profile } from '../data/site';
 import ProjectCard from '../components/ProjectCard.astro';
 
 const projects = [
@@ -13,9 +12,6 @@ const projects = [
 <DefaultLayout title="Work - Portfolio">
   <div slot="sidebar">
     <ProfileCard {...profile} />
-    <div class="mt-6">
-      <SidebarNav items={navItems} />
-    </div>
   </div>
 
   <section>

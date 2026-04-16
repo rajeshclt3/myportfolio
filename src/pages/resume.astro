@@ -1,25 +1,64 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import ProfileCard from '../components/ProfileCard.astro';
-import SidebarNav from '../components/SidebarNav.astro';
 import ExperienceCard from '../components/ExperienceCard.astro';
-import { profile, navItems } from '../data/site';
-
-const experiences = [
-  { role: 'Lead Consultant (Freelance)', company: 'Independent', range: '2022 - Present', description: 'Architectural guidance for AIoT implementations.', tags: ['AIoT', 'RTOS'] },
-  { role: 'Senior Systems Engineer', company: 'Furgo N.V', range: '2019 - 2022', description: 'Engineered sub-sea sensor integration.' }
-];
+import Pill from '../components/Pill.astro';
+import { profile } from '../data/site';
+import {
+  professionalSummary,
+  experiences,
+  workSkills,
+  softSkills,
+  education,
+  awards
+} from '../data/resume';
 ---
 <DefaultLayout title="Resume - Portfolio">
   <div slot="sidebar">
     <ProfileCard {...profile} />
-    <div class="mt-6">
-      <SidebarNav items={navItems} />
-    </div>
   </div>
 
-  <section>
-    <h2 class="text-2xl font-semibold mb-4">Work Experience</h2>
-    {experiences.map(exp => <ExperienceCard {...exp} />)}
+  <section class="space-y-8">
+    <header>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-accent font-semibold mb-2">Professional Summary</p>
+      <p class="text-gray-700 leading-7 max-w-3xl">{professionalSummary}</p>
+    </header>
+
+    <div>
+      <h2 class="text-3xl font-bold tracking-tight mb-5 text-gray-900">Work Experience</h2>
+      <div class="space-y-3">
+        {experiences.map((exp) => <ExperienceCard {...exp} />)}
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="card">
+        <h3 class="text-lg font-semibold mb-4">Work Skills</h3>
+        <div class="flex flex-wrap gap-2">
+          {workSkills.map((skill) => <Pill text={skill} />)}
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="text-lg font-semibold mb-4">Soft Skills</h3>
+        <div class="flex flex-wrap gap-2">
+          {softSkills.map((skill) => <Pill text={skill} />)}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="card">
+        <h3 class="text-lg font-semibold mb-4">Education</h3>
+        <ul class="space-y-2 text-sm text-gray-700 list-disc pl-5">
+          {education.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="text-lg font-semibold mb-4">Awards</h3>
+        <ul class="space-y-2 text-sm text-gray-700 list-disc pl-5">
+          {awards.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
   </section>
 </DefaultLayout>

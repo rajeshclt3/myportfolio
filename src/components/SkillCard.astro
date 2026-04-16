@@ -1,0 +1,19 @@
+---
+import Pill from './Pill.astro';
+
+export interface Props {
+  name: string;
+  description: string;
+  level?: string;
+}
+
+const { name, description, level } = Astro.props as Props;
+---
+
+<article class="card h-full">
+  <div class="flex items-start justify-between gap-3 mb-2">
+    <h3 class="font-semibold text-sm text-gray-900">{name}</h3>
+    {level ? <Pill text={level} /> : null}
+  </div>
+  <p class="text-xs leading-5 text-gray-500">{description}</p>
+</article>

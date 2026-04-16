@@ -1,97 +1,31 @@
 ---
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import ProfileCard from '../components/ProfileCard.astro';
-import SidebarNav from '../components/SidebarNav.astro';
-import { profile, navItems } from '../data/site';
+import SkillSection from '../components/SkillSection.astro';
+import Pill from '../components/Pill.astro';
+import { profile } from '../data/site';
+import { skillPageIntro, skillSections, orchestrationSkills } from '../data/skills';
 ---
 
 <DefaultLayout title="Skills - Portfolio">
   <div slot="sidebar">
     <ProfileCard {...profile} />
-    <div class="mt-6">
-      <SidebarNav items={navItems} />
-    </div>
   </div>
 
-  <section>
-    <div class="mb-8">
-      <p class="text-sm text-accent font-semibold">TECHNICAL ARSENAL</p>
+  <section class="space-y-8">
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-accent font-semibold">{skillPageIntro.eyebrow}</p>
       <h1 class="text-4xl font-extrabold mt-2">Skills & <span class="text-accent">Technologies</span></h1>
-      <p class="text-gray-600 mt-3 max-w-2xl">A comprehensive curation of my technical capabilities across programming paradigms and modern artificial intelligence frameworks.</p>
+      <p class="text-gray-600 mt-3 max-w-2xl">{skillPageIntro.subtitle}</p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <div class="lg:col-span-2">
-        <div class="mb-8">
-          <h2 class="text-xl font-semibold mb-4">Programming Languages</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="p-4 bg-white rounded-lg shadow-sm">
-              <h3 class="font-semibold">Python</h3>
-              <p class="text-sm text-gray-500 mt-1">System orchestration, data engineering, and automation scripts.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow-sm">
-              <h3 class="font-semibold">R</h3>
-              <p class="text-sm text-gray-500 mt-1">Statistical modeling, data visualization, and quantitative analysis.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow-sm">
-              <h3 class="font-semibold">Java</h3>
-              <p class="text-sm text-gray-500 mt-1">Enterprise-scale backend systems and high-performance applications.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow-sm">
-              <h3 class="font-semibold">JavaScript</h3>
-              <p class="text-sm text-gray-500 mt-1">Full-stack development and interactive web frontends.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow-sm">
-              <h3 class="font-semibold">TypeScript</h3>
-              <p class="text-sm text-gray-500 mt-1">Typed JavaScript for large-scale front-end ecosystems.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow-sm">
-              <h3 class="font-semibold">PowerShell & Shell/Bash</h3>
-              <p class="text-sm text-gray-500 mt-1">Windows automation and Unix scripting for CI/CD and ops.</p>
-            </div>
-          </div>
-        </div>
+    {skillSections.map((section) => <SkillSection title={section.title} items={section.items} />)}
 
-        <div>
-          <h2 class="text-xl font-semibold mb-4">AI & Machine Learning</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="p-4 bg-white rounded-lg shadow-sm">
-              <h3 class="font-semibold">AI Security</h3>
-              <p class="text-sm text-gray-500 mt-1">Adversarial defense, prompt injection mitigation, and model alignment testing.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow-sm">
-              <h3 class="font-semibold">Generative AI</h3>
-              <p class="text-sm text-gray-500 mt-1">Diffusion models and transformer-based generation.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow-sm">
-              <h3 class="font-semibold">NLP</h3>
-              <p class="text-sm text-gray-500 mt-1">Sentiment analysis, NER, and semantic parsing.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow-sm">
-              <h3 class="font-semibold">Machine Learning</h3>
-              <p class="text-sm text-gray-500 mt-1">Supervised, unsupervised, and reinforcement learning workflows.</p>
-            </div>
-            <div class="p-4 bg-white rounded-lg shadow-sm">
-              <h3 class="font-semibold">Deep Learning</h3>
-              <p class="text-sm text-gray-500 mt-1">Neural network architecture and optimization.</p>
-            </div>
-          </div>
-        </div>
+    <div class="card">
+      <h3 class="text-[11px] uppercase tracking-[0.2em] text-accent font-semibold mb-4">Modern AI Orchestration</h3>
+      <div class="flex flex-wrap gap-2">
+        {orchestrationSkills.map((item) => <Pill text={item} size="md" />)}
       </div>
-
-      <aside class="hidden lg:block">
-        <div class="p-6 bg-gray-50 rounded-lg">
-          <div class="text-xs uppercase text-gray-500 font-semibold mb-4">Modern AI Orchestration</div>
-          <div class="grid grid-cols-2 gap-3">
-            <div class="p-3 bg-white rounded-md text-center text-sm">Vector DBs</div>
-            <div class="p-3 bg-white rounded-md text-center text-sm">LlamaIndex</div>
-            <div class="p-3 bg-white rounded-md text-center text-sm">Function Calling</div>
-            <div class="p-3 bg-white rounded-md text-center text-sm">RAG</div>
-            <div class="p-3 bg-white rounded-md text-center text-sm">LangChain</div>
-            <div class="p-3 bg-white rounded-md text-center text-sm">Orchestration</div>
-          </div>
-        </div>
-      </aside>
     </div>
   </section>
 </DefaultLayout>
