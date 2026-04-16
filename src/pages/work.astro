@@ -2,14 +2,8 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import ProfileCard from '../components/ProfileCard.astro';
 import SidebarNav from '../components/SidebarNav.astro';
+import { profile, navItems } from '../data/site';
 import ProjectCard from '../components/ProjectCard.astro';
-
-const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Resume', href: '/resume' },
-  { label: 'Work', href: '/work' },
-  { label: 'Contact', href: '/contact' }
-];
 
 const projects = [
   { title: 'Neural Agriculture Monitor', image: '/placeholder.png', categories: ['AI/ML'], excerpt: 'Edge AI for precision agriculture.' },
@@ -18,7 +12,7 @@ const projects = [
 ---
 <DefaultLayout title="Work - Portfolio">
   <div slot="sidebar">
-    <ProfileCard name="Alex Rivera" title="Embedded Systems & AI Engineer" />
+    <ProfileCard {...profile} />
     <div class="mt-6">
       <SidebarNav items={navItems} />
     </div>

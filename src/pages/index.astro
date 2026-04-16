@@ -2,19 +2,14 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import ProfileCard from '../components/ProfileCard.astro';
 import SidebarNav from '../components/SidebarNav.astro';
+import { profile, navItems } from '../data/site';
 import Hero from '../components/Hero.astro';
 import CTASection from '../components/CTASection.astro';
-
-const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Resume', href: '/resume' },
-  { label: 'Work', href: '/work' },
-  { label: 'Contact', href: '/contact' }
-];
 ---
+
 <DefaultLayout title="Home - Portfolio">
   <div slot="sidebar">
-    <ProfileCard name="Alex Rivera" title="Embedded Systems & AI Engineer" location="Bengaluru, India" email="alex@techarch.io" />
+    <ProfileCard {...profile} />
     <div class="mt-6">
       <SidebarNav items={navItems} />
     </div>
