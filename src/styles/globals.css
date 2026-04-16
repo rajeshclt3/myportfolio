@@ -147,3 +147,6 @@ summary::-webkit-details-marker{
   min-height: 64px;
 }
 .nav-gradient > div{ display:flex; align-items:center; }
+
+/* Page accent frame around main content */
+/* page-accent removed */
