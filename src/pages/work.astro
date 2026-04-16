@@ -2,22 +2,22 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import ProfileCard from '../components/ProfileCard.astro';
 import { profile } from '../data/site';
-import ProjectCard from '../components/ProjectCard.astro';
-
-const projects = [
-  { title: 'Neural Agriculture Monitor', image: '/placeholder.png', categories: ['AI/ML'], excerpt: 'Edge AI for precision agriculture.' },
-  { title: 'DeepSea Explorer Mk IV', image: '/placeholder.png', categories: ['Robotics'], excerpt: 'Low-latency tele-operation firmware.' }
-];
+import ProjectShowcaseCard from '../components/ProjectShowcaseCard.astro';
+import { projects, workIntro } from '../data/work';
 ---
 <DefaultLayout title="Work - Portfolio">
   <div slot="sidebar">
     <ProfileCard {...profile} />
   </div>
 
-  <section>
-    <h2 class="text-2xl font-semibold mb-6">Selected Works</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {projects.map(p => <ProjectCard {...p} />)}
+  <section class="space-y-8">
+    <header class="max-w-3xl">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900">{workIntro.title}</h1>
+      <p class="mt-3 text-gray-600 leading-7">{workIntro.subtitle}</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+      {projects.map((project) => <ProjectShowcaseCard {...project} />)}
     </div>
   </section>
 </DefaultLayout>

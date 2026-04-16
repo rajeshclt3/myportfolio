@@ -17,3 +17,35 @@ body{
 .profile-card{
   @apply rounded-xl bg-white shadow-soft p-6 flex flex-col items-center;
 }
+
+summary::-webkit-details-marker{
+  display: none;
+}
+
+.project-visual{
+  @apply relative overflow-hidden rounded-[22px] min-h-[280px] p-6 flex items-end;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+.project-visual-orb{
+  position: absolute;
+  inset: auto auto 18% 12%;
+  width: 34%;
+  aspect-ratio: 1 / 1;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.75), rgba(255,255,255,0.08) 45%, transparent 70%);
+  filter: blur(6px);
+  opacity: 0.9;
+}
+
+.project-visual-copy{
+  @apply relative z-10 text-white;
+}
+
+.project-visual-title{
+  @apply text-3xl font-black tracking-[0.28em];
+}
+
+.project-visual-subtitle{
+  @apply mt-2 text-xs uppercase tracking-[0.35em] text-white/70;
+}

@@ -2,31 +2,48 @@
 import Pill from './Pill.astro';
 
 export interface Props {
-  role: string;
+  title: string;
   company: string;
   range: string;
-  highlight?: string;
   badge?: string;
   badgeTone?: 'neutral' | 'accent';
+  summary?: string;
+  points?: string[];
 }
 
 const {
-  role,
+  title,
   company,
   range,
-  highlight,
   badge,
-  badgeTone = 'neutral'
+  badgeTone = 'neutral',
+  summary,
+  points = []
 } = Astro.props as Props;
 ---
 
-<article class="card py-4 px-5">
-  <div class="flex items-center justify-between gap-3">
-    <div>
-      <h3 class="font-semibold text-gray-900 text-sm">{company} {highlight ? <span class="text-accent">| {highlight}</span> : null}</h3>
-      <p class="text-xs text-gray-500 mt-1">{role}</p>
-      <p class="text-[11px] text-gray-400 mt-1">{range}</p>
+<details class="card group overflow-hidden" open={false}>
+  <summary class="list-none cursor-pointer">
+    <div class="flex items-start justify-between gap-4">
+      <div>
+        <h3 class="font-semibold text-gray-900 text-base">{company} | {title}</h3>
+        <p class="text-xs text-gray-500 mt-1">{range}</p>
+      </div>
+      <div class="flex items-center gap-3 shrink-0">
+        {badge ? <Pill text={badge} tone={badgeTone} /> : null}
+        <span class="text-gray-400 text-sm transition-transform group-open:rotate-180">⌄</span>
+      </div>
     </div>
-    {badge ? <Pill text={badge} tone={badgeTone} /> : null}
-  </div>
-</article>
+  </summary>
+
+  {(summary || points.length) ? (
+    <div class="mt-5 border-t border-gray-100 pt-5 space-y-4">
+      {summary ? <p class="text-sm leading-6 text-gray-600">{summary}</p> : null}
+      {points.length ? (
+        <ul class="space-y-3 text-sm leading-6 text-gray-600 list-disc pl-5">
+          {points.map((point) => <li>{point}</li>)}
+        </ul>
+      ) : null}
+    </div>
+  ) : null}
+</details>

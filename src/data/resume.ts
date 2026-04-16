@@ -1,10 +1,11 @@
 export interface ExperienceItem {
-  role: string;
+  title: string;
   company: string;
   range: string;
-  highlight?: string;
   badge?: string;
   badgeTone?: 'neutral' | 'accent';
+  summary?: string;
+  points?: string[];
 }
 
 export const professionalSummary =
@@ -12,40 +13,70 @@ export const professionalSummary =
 
 export const experiences: ExperienceItem[] = [
   {
-    role: 'Lead Consultant (Freelance)',
+    title: 'Lead Consultant (Freelance)',
     company: 'Independent Engineering Services',
     range: '2022 - Present',
-    highlight: 'Mercedes-Benz R&D',
     badge: 'Current',
-    badgeTone: 'accent'
+    badgeTone: 'accent',
+    summary:
+      'Architectural guidance for AIoT implementations, platform modernization, and embedded systems strategy across industrial programs.',
+    points: [
+      'Designed hardware-aware software architecture for intelligent industrial products where reliability, observability, and long device lifecycles were critical.',
+      'Led system decomposition, delivery planning, and technical decision-making across firmware, backend integration, and operator tooling.',
+      'Built reusable engineering foundations that allowed new modules and customer-specific requirements to be added without destabilizing the core platform.'
+    ]
   },
   {
-    role: 'Senior Systems Engineer',
+    title: 'Senior Systems Engineer',
     company: 'Furgo N.V',
     range: '2019 - 2022',
     badge: 'Marine',
-    badgeTone: 'neutral'
+    badgeTone: 'neutral',
+    summary:
+      'Engineered subsea sensing and control workflows for mission-critical remote systems.',
+    points: [
+      'Developed integration layers between embedded devices, sensor payloads, and operator-facing systems in environments with strict uptime expectations.',
+      'Improved firmware behavior and telemetry pathways for equipment used in offshore and underwater operations.'
+    ]
   },
   {
-    role: 'Embedded Developer',
+    title: 'Embedded Developer',
     company: 'Agrifac Machinery B.V.',
     range: '2017 - 2019',
     badge: 'Core',
-    badgeTone: 'accent'
+    badgeTone: 'accent',
+    summary:
+      'Worked on embedded software for agricultural machinery and field-ready control systems.',
+    points: [
+      'Implemented features for control units operating in harsh physical environments with varying connectivity and power constraints.',
+      'Collaborated with domain teams to convert operator needs into stable production firmware and interface behavior.'
+    ]
   },
   {
-    role: 'Research Engineer',
+    title: 'Research Engineer',
     company: 'Mercedes-Benz R&D',
     range: '2014 - 2017',
     badge: 'R&D',
-    badgeTone: 'neutral'
+    badgeTone: 'neutral',
+    summary:
+      'Contributed to automotive research programs spanning intelligent systems, validation, and prototyping.',
+    points: [
+      'Evaluated new approaches for embedded intelligence and system-level improvements in vehicle research settings.',
+      'Built prototype tooling to support experimentation, analysis, and technical validation.'
+    ]
   },
   {
-    role: 'Associate Consultant',
+    title: 'Associate Consultant',
     company: 'Mindtree',
     range: '2012 - 2014',
     badge: 'Enterprise',
-    badgeTone: 'neutral'
+    badgeTone: 'neutral',
+    summary:
+      'Delivered enterprise engineering solutions with an emphasis on reliability and structured execution.',
+    points: [
+      'Supported delivery teams with implementation, integration, and production-facing engineering tasks.',
+      'Built a foundation in scalable delivery practices, stakeholder communication, and cross-team collaboration.'
+    ]
   }
 ];
 

@@ -1,0 +1,30 @@
+---
+export interface Props {
+  preview: string;
+  paragraphs?: string[];
+  buttonLabel?: string;
+}
+
+const {
+  preview,
+  paragraphs = [],
+  buttonLabel = 'Read full content'
+} = Astro.props as Props;
+---
+
+<div class="space-y-3">
+  <p class="text-sm leading-6 text-gray-600">{preview}</p>
+  {paragraphs.length ? (
+    <details class="group">
+      <summary class="inline-flex cursor-pointer list-none items-center rounded-full border border-gray-200 px-3 py-1.5 text-xs font-semibold text-gray-700 transition-colors hover:border-accent hover:text-accent">
+        <span class="group-open:hidden">{buttonLabel}</span>
+        <span class="hidden group-open:inline">Show less</span>
+      </summary>
+      <div class="mt-4 space-y-3">
+        {paragraphs.map((paragraph) => (
+          <p class="text-sm leading-6 text-gray-600">{paragraph}</p>
+        ))}
+      </div>
+    </details>
+  ) : null}
+</div>
