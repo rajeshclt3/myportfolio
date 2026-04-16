@@ -115,3 +115,8 @@ summary::-webkit-details-marker{
   display: inline-block;
   border: 1px solid rgba(255,255,255,0.2);
 }
+
+.card.card-dark .summary-label{
+  color: var(--accent) !important;
+  opacity: 0.95;
+}

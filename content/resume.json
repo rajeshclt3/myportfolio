@@ -21,6 +21,7 @@
       "logoText": "FG",
       "range": "2022 - 2025",
       "badge": "Marine",
+      "logo": "/images/logos/fugro.png",
       "badgeTone": "neutral",
       "summary": "Worked on advanced software systems for remotely operated vehicles (ROVs), focusing on real-time communication, system reliability, and user interaction. Designed and developed high-performance UI applications using Qt/QML and built backend modules using C++ and ROS2 for distributed system architecture. Implemented a state synchronization module to maintain consistency across multiple system components and developed an event management system for real-time fault detection, classification, and pilot notifications. Contributed to system robustness through modular design and testing by creating a QML-based UI testing framework.",
       "points": [
@@ -42,6 +43,7 @@
       "logoText": "AM",
       "range": "2017 - 2019",
       "badge": "Core",
+      "logo": "/images/logos/agrifac.png",
       "badgeTone": "accent",
       "summary": "Developed software solutions for advanced agricultural sprayer machines, focusing on UI, IoT integration, and system communication. Designed and implemented user interfaces and middleware using C++ and Qt/QML to support real-time machine operations. Built IoT modules for secure telemetry data transmission between field machines and cloud systems, enabling remote monitoring and data-driven insights. Implemented end-to-end OTA (Over-the-Air) update functionality to support remote software deployment and maintenance. Developed client-server communication using TCP/IP and ensured system reliability through automated testing. Contributed to deployment automation and system configuration using Python and Bash scripting.",
       "points": [
@@ -63,6 +65,7 @@
       "logoText": "MB",
       "range": "2014 - 2017",
       "badge": "R&D",
+      "logo": "/images/logos/mercedes.png",
       "badgeTone": "neutral",
       "summary": "Led the design and development of simulation frameworks and infotainment applications for next-generation automotive systems. Specialized in building instrument cluster and head unit simulation platforms to validate future concepts and user experiences. Worked extensively with C++, Qt/QML, and C# (WPF) to develop high-performance, user-centric applications across Linux, Windows, and Android environments. Collaborated closely with cross-functional teams including HMI designers, system architects, and hardware engineers to align software functionality with UX goals and system constraints. Contributed to scalable architecture design, system integration, and rapid prototyping of innovative automotive features.",
       "points": [
@@ -84,6 +87,7 @@
       "logoText": "MT",
       "range": "2012 - 2014",
       "badge": "Enterprise",
+      "logo": "/images/logos/mindtree.png",
       "badgeTone": "neutral",
       "summary": "Designed and developed middleware and UI components for automotive navigation systems, focusing on GENIVI-based platforms. Worked extensively with C++, Qt/QML, and PostgreSQL to build scalable and efficient data handling solutions. Played a key role in architecting independent modules and enabling structured data storage and retrieval for telemetry and navigation features.",
       "points": [
@@ -101,6 +105,7 @@
       "logoText": "EX",
       "range": "2011 - 2012",
       "badge": "Enterprise",
+      "logo": "/images/logos/exor.png",
       "badgeTone": "neutral",
       "summary": "Refactored and optimized existing industrial automation software applications and spearheaded the design and development of various new feature sets. Worked extensively with C++, C#, Qt/QML, and JavaScript to enhance system performance and user interface functionality within a Windows environment.",
       "points": [
@@ -115,6 +120,7 @@
       "logoText": "LP",
       "range": "2007 - 2011",
       "badge": "Enterprise",
+      "logo": "/images/logos/logicpond.png",
       "badgeTone": "neutral",
       "summary": "Design and implementation of a modular plugin architecture for various image analysis tools to enhance system flexibility. Focused on the development of high-performance UI and data visualization tools for complex image analysis. Additionally, refactored and optimized existing image library modules to improve processing efficiency and software stability. During this tenure, received consecutive honors including the Best Performer (2008), Excellent Contribution (2009), and Best Service (2010) awards for outstanding technical delivery",
       "points": [
