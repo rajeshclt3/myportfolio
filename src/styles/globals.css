@@ -124,3 +124,14 @@ summary::-webkit-details-marker{
   color: var(--accent) !important;
   opacity: 0.95;
 }
+
+/* Navigation gradient background (stronger colored variant) */
+.nav-gradient{
+  background: linear-gradient(90deg, #071028 0%, #0f4b5a 60%, #0f3b2f 100%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.nav-gradient a { color: inherit; }
