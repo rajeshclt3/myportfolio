@@ -7,8 +7,7 @@ export const profile = {
 };
 
 export const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Resume', href: '/resume' },
+  { label: 'Home', href: '/resume' },
   { label: 'Work', href: '/work' },
   { label: 'Skills', href: '/skills' },
   { label: 'Contact', href: '/contact' }
