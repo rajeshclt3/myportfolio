@@ -4,7 +4,15 @@
     "title": "Embedded Systems & AI Engineer",
     "location": "Leiden, Netherland",
     "email": "rajeshclt3@gmail.com",
-    "image": "/images/profile.jpg"
+    "image": "/images/profile.jpg",
+    "links": [
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/rajesh-tc-bb306a15/", "icon": "linkedin", "ascii": "💼" },
+      { "label": "GitHub", "href": "https://github.com/rajeshclt3?tab=repositories", "icon": "github", "ascii": "🐙" },
+      { "label": "YouTube", "href": "https://www.youtube.com/@ILoveNederland", "icon": "youtube", "ascii": "▶️" },
+      { "label": "Website", "href": "https://freedutchpractice.nl/", "icon": "website", "ascii": "🌐" }
+    ],
+    "cv": "/files/rajesh-cv.pdf"
+    
   },
   "navItems": [
     { "label": "Home", "href": "/resume" },
